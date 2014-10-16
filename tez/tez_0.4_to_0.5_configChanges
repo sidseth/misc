@@ -19,9 +19,6 @@ tez.am.am.complete.cancel.delegation.tokens tez.cancel.delegation.tokens.on.comp
 tez.am.max.task.attempts  tez.am.task.max.failed.attempts
 tez.generate.dag.viz  tez.generate.debug.artifacts
 
-
-
-
 tez.runtime.intermediate-output.key.comparator.class  tez.runtime.key.comparator.class
 tez.runtime.intermediate-output.key.class tez.runtime.key.class
 tez.runtime.intermediate-output.value.class tez.runtime.value.class
@@ -42,11 +39,9 @@ tez.runtime.job.counters.groups.max tez.am.counters.groups.max.keys
 tez.task.merge.progress.records tez.runtime.merge.progress.records
 tez.runtime.metrics.session.id  tez.runtime.framework.metrics.session.id
 
-tez.task.scale.memory.allocator.class tez.task.scale.task.memory.allocator.class
-tez.task.scale.memory.reserve-fraction  tez.task.scale.task.memory.reserve-fraction
-tez.task.scale.memory.additional.reservation.fraction.per-io  tez.task.scale.task.memory.additional-reservation.fraction.per-io
-tez.task.scale.memory.additional reservation.fraction.max tez.task.scale.task.memory.additional-reservation.fraction.max
-tez.task.initial.memory.scale.ratios  tez.task.scale.task.memory.ratios
+tez.task.scale.memory.additional.reservation.fraction.per-io  tez.task.scale.memory.additional-reservation.fraction.per-io
+tez.task.scale.memory.additional reservation.fraction.max tez.task.scale.memory.additional-reservation.fraction.max
+tez.task.initial.memory.scale.ratios  tez.task.scale.memory.ratios
 
 tez.resource.calculator.process-tree.class  tez.task.resource.calculator.process-tree.class
 
@@ -65,7 +60,7 @@ tez.yarn.ats.enabled  tez.history.logging.service.class
   true  org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService
   false org.apache.tez.dag.history.logging.impl.SimpleHistoryLoggingService
 
-tez.am.container.session.delay-allocation-millis
-  tez.am.container.idle.release-timeout-min.millis
-  tez.am.container.idle.release-timeout-max.millis
+tez.am.container.session.delay-allocation-millis  <VALUE>
+  tez.am.container.idle.release-timeout-min.millis <VALUE>
+  tez.am.container.idle.release-timeout-max.millis  <VALUE>
   
