@@ -1,14 +1,71 @@
 tez.am.java.opts tez.am.launch.cmd-opts 
-tez.am.shuffle-vertex-manager.min-src-fraction  tez.shuffle-vertex-manager.min-src-fraction
-tez.am.shuffle-vertex-manager.max-src-fraction  tez.shuffle-vertex-manager.max-src-fraction
-tez.am.grouping.split-waves tez.grouping.split-waves
-tez.am.grouping.min-size  tez.grouping.min-size
-tez.am.grouping.max-size  tez.grouping.max-size
 tez.am.env  tez.am.launch.env
 
+tez.am.shuffle-vertex-manager.min-src-fraction  tez.shuffle-vertex-manager.min-src-fraction
+tez.am.shuffle-vertex-manager.max-src-fraction  tez.shuffle-vertex-manager.max-src-fraction
+tez.am.shuffle-vertex-manager.enable.auto-parallel  tez.shuffle-vertex-manager.enable.auto-parallel
+tez.am.shuffle-vertex-manager.desired-task-input-size tez.shuffle-vertex-manager.desired-task-input-size
+tez.am.shuffle-vertex-manager.min-task-parallelism  tez.shuffle-vertex-manager.min-task-parallelism
+
+tez.am.grouping.split-count tez.grouping.split-count
+tez.am.grouping.by-length tez.grouping.by-length
+tez.am.grouping.by-count  tez.grouping.by-count
+tez.am.grouping.split-waves tez.grouping.split-waves
+tez.am.grouping.max-size  tez.grouping.max-size
+tez.am.grouping.min-size  tez.grouping.min-size
+tez.am.grouping.rack-split-reduction  tez.grouping.rack-split-reduction
+
+tez.am.am.complete.cancel.delegation.tokens tez.cancel.delegation.tokens.on.completion
+tez.am.max.task.attempts  tez.am.task.max.failed.attempts
+tez.generate.dag.viz  tez.generate.debug.artifacts
+
+
+
+
+tez.runtime.intermediate-output.key.comparator.class  tez.runtime.key.comparator.class
+tez.runtime.intermediate-output.key.class tez.runtime.key.class
+tez.runtime.intermediate-output.value.class tez.runtime.value.class
 tez.runtime.intermediate-output.should-compress tez.runtime.compress
 tez.runtime.intermediate-output.compress.codec  tez.runtime.compress.codec
+tez.runtime.intermediate-input.key.secondary.comparator.class tez.runtime.key.secondary.comparator.class
+tez.runtime.broadcast.data-via-events.enabled tez.runtime.transfer.data-via-events.enabled
+tez.runtime.broadcast.data-via-events.max-size  tez.runtime.transfer.data-via-events.max-size
 
-tez.yarn.ats.enabled  REMOVED - tez.history.logging.service.class
+tez.runtime.shuffle.input.buffer.percent  tez.runtime.shuffle.fetch.buffer.percent
+tez.runtime.task.input.buffer.percent tez.runtime.task.input.post-merge.buffer.percent
 
+tez.runtime.job.counters.max  tez.am.counters.max.keys
+tez.runtime.job.counters.group.name.max tez.am.counters.group-name.max.keys
+tez.runtime.job.counters.counter.name.max tez.am.counters.name.max.keys
+tez.runtime.job.counters.groups.max tez.am.counters.groups.max.keys
 
+tez.task.merge.progress.records tez.runtime.merge.progress.records
+tez.runtime.metrics.session.id  tez.runtime.framework.metrics.session.id
+
+tez.task.scale.memory.allocator.class tez.task.scale.task.memory.allocator.class
+tez.task.scale.memory.reserve-fraction  tez.task.scale.task.memory.reserve-fraction
+tez.task.scale.memory.additional.reservation.fraction.per-io  tez.task.scale.task.memory.additional-reservation.fraction.per-io
+tez.task.scale.memory.additional reservation.fraction.max tez.task.scale.task.memory.additional-reservation.fraction.max
+tez.task.initial.memory.scale.ratios  tez.task.scale.task.memory.ratios
+
+tez.resource.calculator.process-tree.class  tez.task.resource.calculator.process-tree.class
+
+#--- DELETE ---
+tez.runtime.intermediate-input.key.comparator.class
+tez.runtime.intermediate-input.key.class
+tez.runtime.intermediate-input.value.class
+tez.runtime.intermediate-input.is-compressed
+tez.runtime.intermediate-input.compress.codec
+tez.profile.container.list
+tez.profile.jvm.opts
+tez.am.slowstart-dag-scheduler.min-resource-fraction
+
+#--- HANDLE SEPARATELY ---
+tez.yarn.ats.enabled  tez.history.logging.service.class
+  true  org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService
+  false org.apache.tez.dag.history.logging.impl.SimpleHistoryLoggingService
+
+tez.am.container.session.delay-allocation-millis
+  tez.am.container.idle.release-timeout-min.millis
+  tez.am.container.idle.release-timeout-max.millis
+  
