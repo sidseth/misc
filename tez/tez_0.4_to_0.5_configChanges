@@ -1,0 +1,14 @@
+tez.am.java.opts tez.am.launch.cmd-opts 
+tez.am.shuffle-vertex-manager.min-src-fraction  tez.shuffle-vertex-manager.min-src-fraction
+tez.am.shuffle-vertex-manager.max-src-fraction  tez.shuffle-vertex-manager.max-src-fraction
+tez.am.grouping.split-waves tez.grouping.split-waves
+tez.am.grouping.min-size  tez.grouping.min-size
+tez.am.grouping.max-size  tez.grouping.max-size
+tez.am.env  tez.am.launch.env
+
+tez.runtime.intermediate-output.should-compress tez.runtime.compress
+tez.runtime.intermediate-output.compress.codec  tez.runtime.compress.codec
+
+tez.yarn.ats.enabled  REMOVED - tez.history.logging.service.class
+
+
